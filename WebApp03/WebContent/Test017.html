@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test017.html</title>
+
+<style type="text/css">
+	intput.box_won {color: gray;}
+	input.box_won{width : 80px;}
+
+</style>
+
+<script type="text/javascript">
+
+function calWon()
+{
+	//alert("함수 호출");
+	
+	var vNum = parseInt(document.getElementById("num").value);
+	
+	document.getElementById("tot").value = vNum;
+			
+	document.getElementById("obwon").value = Math.trunc(vNum/500);
+	
+	document.getElementbyId("bwon").value = Math.trunc((vNum%500)/100);
+	
+	document.getElementbyId("oswon").value = Math.trunc((vNum%500)%100)/50;
+	
+	document.getElementbyId("swon").value = Math.trunc((((vNum%500)%100)%50)/10);
+	
+	w500 = parseInt (won / 500);
+    w100 = parseInt( parseInt(won%500) / 100 ) ;
+    w50 = parseInt( parseInt( parseInt(won%500) % 100) / 50 ) ;
+    w10 = parseInt( parseInt( parseInt( parseInt(won%500) % 100) % 50) /10 );
+}
+
+</script>
+
+</head>
+<body>
+
+<!-- 
+	특정 금액(10원 ~ 990원)을 사용자로부터 입력받아
+	화폐 단위로 구분하여 출력하는 페이지를 구성한다.
+	화폐 단위는 편의상 오백원, 백원, 오십원, 십원 으로 구분한다.
+	HTML, CSS, Javascript 를 활용한다.
+	
+	페이지 기본 레이아웃 구성
+	------------------------------------------------------------
+	
+	금액 [          ] 원
+	
+	<결과> <취소>
+	
+	총액 [          ] 원
+	오백원   [      ] 개
+	백원     [      ] 개
+	오십원   [      ] 개
+	십원     [      ] 개
+	
+	------------------------------------------------------------
+ -->
+
+<div>
+	<form>
+	금액 <input type="text" class="box" id="num">
+	<br><br>
+	<input type="button" value="결과" id="btn" onclick="calWon()">
+	<input type="reset" class="btn" value="취소"> 
+	
+	<br><br>
+	총액 <input type="text" class="box_won" id="tot" disabled="disabled""> 원
+	<br>
+	오백원 <input type="text" class="box_won" id="obwon" disabled="disabled"> 개
+	<br>
+	백원 <input type="text" class="box_won" id="bwon" disabled="disabled"> 개
+	<br>
+	오십원 <input type="text" class="box_won" id="oswon" disabled="disabled"> 개
+	<br>
+	십원 <input type="text" class="box_won" id="swon" disabled="disabled"> 개
+	</form>
+</div>
+
+
+</body>
+</html>

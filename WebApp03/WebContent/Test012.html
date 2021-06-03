@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test012.html</title>
+
+<script type="text/javascript">
+
+   message = "<h1>Hello~!!!</h1>";
+   document.write(message);
+   alert(message);
+   /* alert -> 경고창을 띄우는 함수 */
+
+</script>
+
+<!-- 
+※ 주의아래 구문은 외부의 스크립트를 참조하는 것이기 때문에
+이 사이에 다른 스크립트 소스코드를 작성하면 안된다. -->
+<script type="text/javascript" src="js/alertTest.js"></script>
+
+
+<script type="text/javascript">
+
+	// Date 내장 객체 : 현재 시스템의 날짜와 시간
+	// 함수/첫글자가 대문자다 → 생성자 → 자바스크립트에서는 객체를 의미
+	// var dt = Date().toString(); → 우리 식 대로의 이해
+	var dt = String(Date());
+	document.write(dt);
+
+</script>
+
+
+</head>
+<body>
+
+</body>
+</html>

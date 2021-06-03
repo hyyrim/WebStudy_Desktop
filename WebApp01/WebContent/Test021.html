@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test021.html</title>
+</head>
+<body>
+
+<div>
+	<h1>전송, 취소 버튼 만들기</h1>
+	<hr>
+</div>
+
+<div>
+	<!-- ★ 데이터 전송 및 페이지 요청 ★ -->
+	<!-- 이 폼 안에 submit 액션을 수행하게되면 이 폼안의 액션속성의
+	 페이지로 데이터 전송 + 특정 페이지 요청-->
+
+	<!-- <form action="http:/211.238.142.150:8090/WebApp01/Test022.html"> -->
+	<form action="Test022.html">
+		*이름 <input type="text" name="name" size="15" maxlength="8">
+		<br>
+		*이메일 <input type="text" name="email" size="15" maxlength="20">
+		<br>
+		*하고싶은 말 <br>
+		<textarea rows="10" cols="50" name="field"></textarea>
+		<br><Br>
+		
+		<input type="submit" value="전송하기" name="submitBtn">
+		<input type="reset" value="다시쓰기">
+		
+	</form>
+</div>
+
+
+</body>
+</html>

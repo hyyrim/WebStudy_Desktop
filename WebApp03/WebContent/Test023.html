@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test023.html</title>
+
+<style type="text/css">
+	* {color: #696969;}
+	input {font-family: 굴림; font-weight: bold;}
+	input:focus {background: #E6E6FA;}
+	input.txt {width: 100px; text-align: "right";}
+	input.btn {width: 50px; text-align: "center";}
+	input.txtArray {width: 50px; text-align: "center";}
+	
+</style>
+
+<script type="text/javascript">
+
+	function addMember()
+	{
+		//alert("함수 호출");
+		
+		var str = "";
+		var arr = new Array();
+		var n = 0;
+		
+		do
+		{			
+			str = prompt("이름 전화번호 입력(" + (n+1) + ") : ");
+			
+			// 테스트
+			//alter(str);
+			
+			if (str==null || str==" " || str==".") 
+				break;			
+				
+			arr[n] = str;
+			n++;
+			
+		} while (true);
+		
+		document.getElementById("txtCount").value = arr.length;
+		
+		document.getElementById("txtResult").value = " 이름    전화번호\n";
+		
+		for(var n=0; n<arr.length; n++)
+			document.getElementById("txtResult").value += arr[n] + "\n";
+		
+		
+ 
+	}
+
+</script>
+
+
+</head>
+<body>
+
+<!-- 
+	여러 명의 이름과 전화번호를 입력받고
+	그 내용을 전체 출력하는 페이지를 구성한다.
+	
+	HTML, CSS, Javascript를 활용한다.
+	
+	prompt()를 활용한다.
+	
+	페이지 레이아웃
+	--------------------------------------------------------
+	< 회원 정보 입력> -------------------------------------- 버튼클릭 → 이름 전화번호 입력(1) : 한혜림 010-1111-1111
+	                                                                     이름 전화번호 입력(2) : 장서현 010-2222-2222
+	                                                                     이름 전화번호 입력(3) : 입력없음 / . / 공백
+	
+	전체 회원 수 : [      ] 명
+	---------------------------
+	    이름      전화번호
+	---------------------------
+	           :
+	
+	--------------------------------------------------------
+
+		
+-->
+
+<div>
+	<h1>자바스크립트 활용</h1>
+	<h2>prompt()</h2>
+	<hr>
+</div>
+
+<div>
+	<form>
+		<input type="button" value="회원 정보 입력" class="btn" 
+		style="width: 200px;" onclick="addMember()">
+		
+		<br><br><br>
+		
+		전체 회원 수 : <input type="text" id="txtCount" class="txt" style="width: 50px;" readonly="readonly"> 명
+		
+		<br><br>		
+		
+		<textarea rows="10" cols="30" id="txtResult" readonly="readonly">
+		</textarea>
+		
+	
+		
+	</form>
+</div>
+
+
+</body>
+</html>
