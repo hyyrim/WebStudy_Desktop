@@ -5,19 +5,22 @@ body, p, div, span, input, table, th, td, select
 	font-size: 18px;
 	font-family: 맑은 고딕;
 	color: #343;
+	
+	
 }
 
-control
+.control
 {
 	border: 1px solid gray;
 	border-radius: 3px;
 }
 
-table
+.table
 {
 	border-collapse: collapse;
 	width: 100%;
 }
+
 
 .table th, .table td
 {
@@ -31,8 +34,9 @@ table
 .table th
 {
 	font-weight: bold;
-	background-color: #EEE;
+	background-color: #EEE;	
 }
+
 
 .btn
 {
@@ -44,6 +48,12 @@ table
 	color: orange;
 	background-color: #778877;
 }
+
+
+
+
+
+
 
 
 

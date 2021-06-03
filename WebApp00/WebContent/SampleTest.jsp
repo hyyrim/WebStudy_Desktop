@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <title>SampleTest.jsp</title>
-<link rel="stylesheet" type="text/css" href="css/main.css"> 
+<link rel="stylesheet" type="text/css" href="css/default.css"> 
 
 </head>
 <body>
@@ -15,11 +15,11 @@
 </div>
 
 <div>
-	<h2>작은 주제</h2>
+	<h2>작은주제</h2>
 	<form>
-	
 	</form>
 </div>
+
 
 </body>
 </html>

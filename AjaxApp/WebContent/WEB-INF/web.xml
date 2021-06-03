@@ -27,5 +27,17 @@
 	</servlet-mapping> 
 	-->
 	
+	<!-- test02.do -->
+	<!-- 페이지 내 다른 컨트롤 확인 실습 -->
+	<servlet>
+		<servlet-name>test02</servlet-name>
+		<servlet-class>com.test.ajax.Test02</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>test02</servlet-name>
+		<url-pattern>/test02.do</url-pattern>
+	</servlet-mapping> 
+	
 	
 </web-app>
