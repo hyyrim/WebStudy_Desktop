@@ -40,5 +40,6 @@ function createAjax()
 		return new XMLHttpRequest();
 	else	
 		return null;
+	
 
 }
