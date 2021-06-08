@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>GetTest01.jsp</title>
+<title>PostTest01.jsp</title>
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <style type="text/css">
 	.txtNum
@@ -20,6 +20,13 @@
 
 <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 <script type="text/javascript">
+
+	// ○ 『$.post(url, data, callback);』
+	//     - 매개변수로 넘겨받은 url 을 사용하여 서버에 대한 POST 요청을 전송한다.
+	//	     · url      : (String) POST 메소드로 연결하는 서버 측 URL
+	//	     · data     : (Object) 이름과 값이 쌍으로 프로퍼티를 가진 객체.
+	//	  			       미리 구성 및 인코딩 된 쿼리 스트링.
+	//	     · callback : (Function) 요청이 완료되면 호출되는 함수.
 	
 	$(function()
 	{
@@ -29,35 +36,28 @@
 			var su2 = $("#su2").val();
 			var oper = $("#oper").val();
 			
-			// ○ 『$.get(url, data, callBack)』
-			//	  - 매개변수 전달받은 URL을 사용하여
-			//	    서버에 대한 GET 요청을 전송한다.
-			$.get("GetTest01_ok.jsp"
-			, {su1:su1, su2:su2, oper:oper }
+			// check~!!!
+			// post 방식
+			$.post("PostTest01_ok.jsp"
+			, {su1 : su1, su2 : su2, oper : oper}
 			, function(args)
 			{
-				$("#result").html(args);
-			});
-			// url → 경로 포함 요청 페이지
-			// data → { 이름:값, 이름:값, 이름:값 ... }
-			// callBack → 기능 → 함수
-			
-			//$.get("GetTest01_ok.jsp",{su1:su1, su2:su2, oper:oper }, function(args){$("#result").html(args);});
-			//$.get("요청URL",{이름:값}, function(넘겨받은값){$(선택자).html(값);});
-			
-		});
-		
+				$("#result").html(args);		
+			})
+		})
 	});
-	
+
 </script>
 
 </head>
 <body>
 
 <div>
-	<h1>jQuery 의 get() 메소드 실습</h1>
+	<h1>jQuery 의 post() 메소드 실습</h1>
 	<hr>
 </div>
+
+<!-- jQuery 에서 Ajax 처리를 get/post 방식을 선택적으로 처리할 수 있다. -->
 
 <div>
 	<input type="text" id="su1" class="txt txtNum">
@@ -73,7 +73,6 @@
 <br>
 <div id="result">
 </div>
-
 
 </body>
 </html>
